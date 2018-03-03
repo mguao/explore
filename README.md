@@ -1,1 +1,1 @@
-only for learning coding Python
+codes I generated when learning Python
