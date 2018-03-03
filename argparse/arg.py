@@ -1,16 +1,21 @@
+#!/usr/bin/env python
+
+#import the argparse module
 import argparse
 
 def processServer(server):
+    ''' define a function to process a single argument given'''
     print server
 
 def processFile(file):
+    ''' define a function to handle a list in a file'''
     f = file.readlines()
     for i in f:
         print i.strip()
 
 
 def main():
-
+    ''' create the parse object '''
     parser = argparse.ArgumentParser()
     parser.add_argument("-f", "--file", help="input file", type=argparse.FileType('r'))
     parser.add_argument("-s", "--server", help="FQDN of the server")
