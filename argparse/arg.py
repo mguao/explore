@@ -2,6 +2,7 @@
 
 #import the argparse module
 import argparse
+import sys
 
 def processServer(server):
     ''' define a function to process a single argument given'''
@@ -20,6 +21,10 @@ def main():
     parser.add_argument("-f", "--file", help="input file", type=argparse.FileType('r'))
     parser.add_argument("-s", "--server", help="FQDN of the server")
     args = parser.parse_args()
+    
+    if len(sys.argv) == 1:
+        parser.print_help(sys.stderr)
+        sys.exit(1)
 
     if args.file:
         processFile(args.file)
