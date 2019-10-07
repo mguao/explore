@@ -2,6 +2,7 @@
 
 import argparse
 import sys
+import json
 
 def processServer(server):
     ''' define a function to process a single argument given'''
